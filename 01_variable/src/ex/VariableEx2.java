@@ -47,8 +47,8 @@ public class VariableEx2 {
 		// 값의 범위가 더 큰 자료형을 값의 범위가 더 작은 변수에 대입 불가
 		// -> 억지로 대입하려면 "강제 형변환"을 이용		
 		
-		int a = 100;
-		double b = 23.4;
+		// int a = 100;
+		// double b = 23.4;
 		
 		// int result = a + b; // a + b = 100.0 + 23.4 = 123.4(double)
 		
