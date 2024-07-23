@@ -99,7 +99,7 @@ public class OperatorEx {
 		boolean result1 = randomNumber >= 1 && randomNumber <= 10;
 		boolean result2 = randomNumber % 2 == 0; // 짝수 확인
 		
-		System.out.println("1 ~ 10 사이 짝수 맞음? " + ( result1 && result2 ) );
+		System.out.printf("%d는 1 ~ 10 사이 짝수 맞음? %b" , randomNumber,  result1 && result2 );
 	}
 	/**
 	 * 입력 받은 수가 짝수 이거나 10보다 큰 수인지 확인 
