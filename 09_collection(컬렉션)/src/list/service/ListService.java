@@ -1,7 +1,9 @@
 package list.service;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 /* Collection Framework : Java에서 제공하는 자료구조를 모아둔 것 (java.util 패키지에 존재)
  * [특징]
@@ -120,11 +122,47 @@ public class ListService {
 		// - List에서 지정된 index번째 요소를 제거 -> 중간이 제거되면 뒤쪽 요소를 앞으로 이동됨
 		// - 제거된 요소는 메서드 결과로 반환됨
 		System.out.println(menuList.remove(2) + " 제거");
-		System.out.println(menuList);
-		
-		
-		
+		System.out.println(menuList);	
 	}
+	/**
+	 * 왜 컬렉션 참조 변수를 부모타입으로 작성하는가?
+	 * - 프로그래밍 과정에서 미쳐 생각지 못한 비효율적인 요소를 쉽게 개선하기 위해서
+	 *   ex) ArrayList로 만들었는데 중간에 추가, 삭제가 빈번히 일어나는 경우 -> LinkedList가 훨씬 효율적이다
+	 *   	 LinkedList로 만들었는데 검색이 빈번하게 일어나는 경우 -> ArrayList가 훨씬 효율적
+	 */
+	public void test3() {
 		
+//		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> list = new LinkedList<Integer>();
+		
+		Random random = new Random();
+		
+		// System.currentTimeMillis()
+		// -> 1970년 1월 1일 09:00:00.00 기준으로 현재 시간 까지 지난 시간을 ms로 반환(long) 
+//		System.out.println(System.currentTimeMillis());
+		long start = System.currentTimeMillis();
+		
+		for(int i = 0; i < 1000000; i++) { // 100만 바퀴
+			list.add(random.nextInt(100000)); // 0 ~ 99999 사이 난수
+//			System.out.println(list.get(i));
+		}
+		long end = System.currentTimeMillis();
+		System.out.println("생성 완료 - 걸린 시간 : " + (end - start) + "ms");
+		
+		// 추가 시간 확인
+		start = System.nanoTime();
+		list.add(500000, 123456789); // 중간에 데이터 삽입
+		end = System.nanoTime();
+		
+		System.out.println("추가 시간 : " + (end - start) + "nm");
+		
+		// 검색 시간 확인
+		start = System.currentTimeMillis();
+		System.out.println(list.indexOf(123456789));
+		end = System.currentTimeMillis();
+		
+		System.out.println("검색 시간 : " + (end - start) + "ms");
+	}
+	
 	
 }

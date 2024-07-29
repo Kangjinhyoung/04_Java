@@ -5,7 +5,7 @@ public class BookDTO {
 	private String writer; // 저자(글쓴이)
 	private int price;     // 가격
 	
-	public BookDTO( ) {} // 기본 생성자
+	public BookDTO() {} // 기본 생성자
 
 	public BookDTO(String title, String writer, int price) { // 매개 변수 생성자
 		super();
