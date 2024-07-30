@@ -3,14 +3,14 @@ package ex;
 public class PrintEx {
 	public static void main(String[] args) {
 		/* System.out == 지정된 출력용 화면
-		 * 			  == 이클립스는 console창
+		 * 			  == 이클립스는 console 창
 		 * 
 		 * System.out.print(출력내용);
-		 * - () 내의 값을 console에 출력
+		 * - () 내의 값을 console 에 출력
 		 * 	 -> 줄이 바뀌지 않고 이후 출력도 오른쪽에 이어서 출력됨
 		 * 
 		 * System.out.println(출력내용);
-		 * - () 내의 값을 console에 출력 + 줄바꿈
+		 * - () 내의 값을 console 에 출력 + 줄바꿈
 		 * 
 		 * System.out.printf("템플릿", 사용될 변수|값 ...);
 		 * - 정해진 형식(템플릿)에 맞는 문자열을 출력하는 구문
