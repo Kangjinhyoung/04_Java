@@ -53,7 +53,9 @@ public class VariableEx1 {
 		// 변수에 값을 대입
 		num1 = 2000;
 		System.out.println(num1); // 값이 대입되면 오류가 안난다.
+		
 		System.out.println("---------------------------------");
+		
 		System.out.println("[자료형별 리터럴 작성법]");
 		// 논리형(1byte)
 		boolean isTrue = true;

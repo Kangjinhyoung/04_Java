@@ -84,7 +84,8 @@ public class PrintEx {
 		// -> 둘째 자리에서 반올림
 		double num = 1.25;
 		System.out.println(); 
-		System.out.printf("%s/%.1f", name, num); 
+		System.out.printf("%s/%.1f", name, num); // 홍길동/1.3
+		
 		
 	}
 }
